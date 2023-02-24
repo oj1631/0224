@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form 필터 선택자</title>
+    <style>*{font-size: 16pt; margin-left: 5px};</style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        
+        $(document).ready(function() {            
+        //    .css("background","red");
+        $("input:text").css("background","red");
+        $("input:password").css("background","orange");
+        $(":password").css("background","yellow");
+        $("input:checkbox + label").css("background","green");
+        $("option:selected").css("background", "pink")
+        // $("textarea:disabled").css("background", "pink")
+        $("textarea:enabled").css("background", "yellow")
+        });
+    </script>   
+</head>
+<body>
+    <h2>ex4-8 459~460페이지 폼태그필터 3:50</h2>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button>확인</button></div>
+    <div><input type="checkbox" id="css"><label for="css">css</label>
+         <input type="checkbox" id="js" ><label for="js">js</label></div>
+    <div>
+        <select>
+            <option>과목선택</option>
+            <option selected>javascript</option>
+            <option>jQuery</option>
+            <option>css</option>
+            <option>bootstrap</option>
+        </select> <p></p>
+        <textarea cols="20" rows="5" enabled="enabled">서비스 개봉후 1년</textarea>
+    </div>
+</body>
+</html> 

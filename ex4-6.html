@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자식 필터 선택자</title>
+    <style>
+        span {
+            font-size: 20pt;
+            margin: 5px;
+            display: inline-block;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // .css("border", "2px solid red");
+           $("#m1 > span:first-child").css("border", "2px solid red");
+           $("#m1 > span:last-child").css("border", "2px solid red");
+
+           $("#m2 > span:first-of-type").css("border", "2px solid pink");
+           $("#m2 > span:last-child").css("border", "2px solid pink");
+
+           $("#m3 > span:nth-child(1)").css("border", "3px solid green");
+           $("#m3 > span:nth-last-of-type(1)").css("border", "3px solid green");
+
+           $("#m4 > span:nth-of-type(1)").css("border", "5px solid green");
+           $("#m4 > span:nth-last-of-type(1)").css("border", "5px solid green");
+
+           $("#m5 > span:only-child").css("border", "5px solid blue");
+           $("#m6 > span:only-of-type").css("border", "5px solid navy");
+        });
+    </script>
+</head>
+<body>
+    <h2>ex4-6 455페이지 자식필터  child, nth</h2>
+    <div id="m1">
+        <span>내용1_1</span>
+        <span>내용1_2</span>
+        <span>내용1_3</span>
+    </div>
+    <div id="m2">
+        <strong>2_1strong </strong>
+        <span>2_2span</span>
+        <strong>2_3strong</strong>
+        <span>2_4span</span>
+    </div>
+    <div id="m3">
+        <span>3_1span</span>
+        <span>3_2span</span>
+        <span>3_3span</span>
+    </div>
+    <div id="m4">
+        <strong>strong4_1</strong>
+        <span>span4_2</span>
+        <strong>strong4_3</strong>
+        <span>span4_4</span>
+        <strong>strong4_5</strong>
+        <span>span4_6</span>
+    </div>
+    <div id="m5">
+        <span>내용5_1</span>
+    </div>
+    <div id="m6">
+        <strong>strong6_1</strong>
+        <span>span6_2</span>
+    </div>
+</body>
+</html> 
